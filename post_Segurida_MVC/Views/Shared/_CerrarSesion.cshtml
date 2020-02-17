@@ -1,0 +1,6 @@
+﻿@if (HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    <li>@Html.ActionLink("Cerrar sesion", "CerrarSesion", "Manage")</li>
+}
+@HttpContext.Current.User.Identity.Name
+

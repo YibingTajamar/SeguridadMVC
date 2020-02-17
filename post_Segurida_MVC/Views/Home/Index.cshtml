@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    int id = 0;
+    if (User.Identity.Name != "")
+    {
+        id = int.Parse(User.Identity.Name);
+    }
+    else
+    {
+        id = 0;
+    }
+
+}
+
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">Bienvenio al TECH CLUB TAJAMAR</p>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.ActionLink("ListaEmpleado", "ListaEmpleado", "Empleado", null, new { @class = "btn btn-success btn-lg btn-block" })
+    </div>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="row">
+    <div class="col-md-12">
+        @Html.ActionLink("Perfil", "DetalleEmpelado", "Empleado", new { idEmp = id }, new { @class = "btn btn-success btn-lg btn-block" })
+    </div>
+</div>
+<br />*@
+
+
+
+
+
+@*solo se muestra si "NO ESTA" authetificado el usuario*@
+@*@if (!User.Identity.IsAuthenticated)
+    {
+
+    }*@
+
+@*<div class="row">
+        <div class="col-md-12">
+            @Html.ActionLink("Login", "Login", "Manage", null, new { @class = "btn btn-success btn-lg btn-block" })
+        </div>
+    </div>*@
+<br />

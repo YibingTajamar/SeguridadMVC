@@ -1,0 +1,42 @@
+﻿@model post_Segurida_MVC.Models.Empleado
+
+@{
+    ViewBag.Title = "DetalleEmpelado";
+}
+
+<h2>DetalleEmpelado</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PuestoTrabajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PuestoTrabajo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

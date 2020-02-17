@@ -1,0 +1,42 @@
+﻿@model IEnumerable<post_Segurida_MVC.Models.Empleado>
+
+@{
+    ViewBag.Title = "ListaEmpleado";
+}
+
+<h2>ListaEmpleado</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuestoTrabajo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuestoTrabajo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "DetalleEmpelado", new {  idEmp=item.IdEmpleado }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
